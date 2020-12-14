@@ -113,6 +113,7 @@ h1 {
     background-color: var(--opac);
     color: var(--middlegrey);
     border-radius: 3px;
+    z-index: 10;
 }
 
 .stepper {
