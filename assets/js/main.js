@@ -15,3 +15,8 @@
 // tehát ez is egy lehetőség a manuális lapozásra
 
 'use strict';
+
+const parametersInput = () => {
+    const imageHeight = document.querySelector('#imageHeight');
+    const msecsBeforeNextImg = document.querySelector('#msecsBeforeNextImg');
+}

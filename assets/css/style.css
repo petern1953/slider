@@ -1,0 +1,185 @@
+:root {
+    --darkgrey: #555;
+    --middlegrey: #bbb;
+    --light: #eee;
+    --opac: rgba(238, 238, 238, .5);
+    /* --grey: #ddd;
+    --red: rgb(251, 110, 83);
+    --blue: #0000ff;
+    --white: #fff; */
+    --font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 98vh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: auto 0;
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--darkgrey);
+}
+
+h1 {
+    color: var(--light);
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-bottom: 6px;
+    padding-bottom: 0;
+    color: var(--white);
+}
+
+.slider__container {
+    display: block;
+    position: relative;
+    width: 100%;
+    /* must be set by JS */
+    height: 600px;
+    /* * */
+    background-color: var(--middlegrey);         
+    margin: auto;
+    padding: auto;
+    padding-bottom: 0px;
+    /* background-image: url('../img/LampagyujtasElott2.jpg'); */
+    background-position: center;
+    /* background-size: contain; */
+    background-size: cover;
+}
+.image__area {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* must be set by JS */
+    height: 600px;
+    /* * */
+}
+
+.image {
+    display: inline-block;
+    position: absolute;
+    object-fit: cover;
+    min-width: 100vw;
+    /* width: auto; */
+    height: 600px;
+}
+
+/* toDO: innen folytatni */
+.left {
+    right: 0;
+}
+
+.right {
+    left: 100%;
+}
+
+.left--out {
+    /* position: absolute; */
+    left: -100%;
+    transition: left 3s;
+}
+
+.left--in {
+    /* position: absolute; */
+    left: 0;
+    transition: left 3s;
+}
+
+.right--out {
+    /* position: absolute; */
+    left: 100%;
+    transition: left 3s;
+}
+
+.right--in {
+    /* position: absolute; */
+    left: 0;
+    transition: left 3s;
+}
+
+.counter__container {
+    position: relative;
+    width: fit-content;
+    margin: 8px auto auto 6px;
+    padding: 2px 4px;
+    font-size: .9rem;
+    background-color: var(--opac);
+    color: var(--middlegrey);
+    border-radius: 3px;
+}
+
+.stepper {
+    display: flex;
+    position: absolute;
+    top: 44%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100vw;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--opac);
+}
+
+.fa-angle-left::before, .fa-angle-right::before {
+    display: inline-block;
+    position: absolute;
+    opacity: 20%;
+}
+
+.fa-angle-left::before {
+    left: 8px;
+}
+
+.fa-angle-right::before {
+    right: 8px;
+}
+
+.fa-angle-left:hover::before, .fa-angle-right:hover::before {
+    visibility: visible;
+    opacity: 100%;
+}
+
+.caption {
+    display: block;
+    position: relative;
+    top: 90%;
+    /* bottom: 45px; */
+    /* margin: 0 auto; */
+    /* padding: 0 auto; */
+    font-size: .9rem;
+    text-align: center;
+    color: var(--light);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 95%;
+    /* margin: 0 auto;
+    padding: 0; */
+}
+
+.dot {
+    display: inline-block;
+    /* display: flex; */
+    padding: 4px;
+    font-size: .9rem;
+    color: var(--opac);
+}
+
+.dot.selected {
+    display: flex;
+    padding: 4px;
+    font-size: .9rem;
+    color: var(--light);
+}

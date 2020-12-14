@@ -9,6 +9,18 @@
 </head>
 
 <body>
+    <h1>Slider</h1>
+    <form action="./assets/js/main.js"></form>
+    <fieldset class='parameters container'>
+        <legend>Parameters</legend>
+        <label for="imageHeight">Height of image area</label> <br>
+        <!-- toDO: max value of image area height must be aligned from JS to window height! -->
+        <input type="number" name="" id="imageHeight" min="600" max="1400" value="800"> pixels <br><br>
+        <label for="msecsBeforeNextImg">Waiting time before next image</label> <br>
+        <input type="number" name="" id="msecsBeforeNextImg" min="1" max="15" value="3"> millisecs <br><br>
+        <p>Forward to image slider page</p>
+        <button>Accept values</button>
+    </fieldset>
 
     <script src="./assets/js/main.js"></script>
 </body>
